@@ -28,12 +28,34 @@
     />
     <meta name="twitter:image:src" content="http://zehfernandes.com/generativeworldcup2018/cover.png" />
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/tachyons.min.css">
     <style>
         html,
         body {
             height: 100%;
+        }
+
+        .max90 {
+            max-width: 90%
+        }
+
+        .mobile-title {
+            width: 90%;
+            margin: 1.5rem auto 0 auto;
+        }
+
+        @media screen and (min-width: 30em) {
+            .max50-ns {
+                max-width: 50%;
+            }
+
+            .mobile-title {
+                margin: 0;
+                left: 3rem;
+                top: 1.8rem;
+                width: auto;
+            }
         }
 
         @font-face {
@@ -58,7 +80,7 @@
 <body class="bg-near-white helvetica black">
 
     <!-- Topo -->
-    <div style="position: absolute; left: 3rem; top: 1.8rem;">
+    <div class="mobile-title relative absolute-ns">
         <a href="{{htmlWebpackPlugin.options.links.absoluteURL}}" class="link black hover-red">
             <h2 class="fw7 mb1 mt2 pa0" style="font-size: 2rem; letter-spacing:-0.03rem; line-height: 1.1em">
                 Generative
@@ -68,7 +90,7 @@
         </a>
     </div>
 
-    <ul class="list fl w-20" style="position: absolute; right: 3rem; top: 1.8rem;">
+    <ul class="dn db-ns list fl w-20" style="position: absolute; right: 3rem; top: 1.8rem;">
         <li class="fr dib">
             <a class="link fw5 black hover-red" href="{{htmlWebpackPlugin.options.links.github}}">Source Code</a>
         </li>
@@ -81,7 +103,7 @@
     <!-- Bottom -->
     <!--<a href="" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 7.6em;">
         <span class="pr1">⏅</span> zoom</a> -->
-    <a href="https://twitter.com/zehf/status/1010682969453973504" target="_blank" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 4.6em;">
+    <a href="https://twitter.com/zehf/status/1010682969453973504" target="_blank" class="dn db-ns link f3 black hover-red" style="position: fixed; left: 3rem; bottom: 4.6em;">
         <span class="pr1">⏂</span> data</a>
     <a id="prev" href="{{htmlWebpackPlugin.options.links.absoluteURL}}" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 2.8rem;">
         <span class="pr1">←</span> prev</a>
@@ -90,8 +112,8 @@
         <span class="pl1 dib">→</span>
     </a>
 
-    <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding-top:1.8rem;">
-        <canvas style="max-width: 50%; display: block; box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 20px 0px; box-sizing: border-box;"></canvas>
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding-bottom:8em; padding-top:2rem;">
+        <canvas class="max90 max50-ns" style="display: block; box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 20px 0px; box-sizing: border-box;"></canvas>
     </div>
 </body>
 
