@@ -141,8 +141,8 @@ function animate() {
     c.fillStyle = returnRGBA(data.color.bg)
     c.fillRect(0, 0, canvas.width, canvas.height)
 
-    // x, y, width, height radius
     let [r, g, b] = data.color.bg
+    // x, y, width, height radius
     new ConicalGradient()
         .addColorStop(0, [r, g, b, 0.3])
         .addColorStop(0.35, [r, g, b, 0.3])
@@ -152,7 +152,7 @@ function animate() {
             innerMargin + gridWidth,
             innerMargin + gridHeight * 2,
             gridWidth * 2,
-            data.distanceCovered * 2 * size, //TODO:DATA
+            data.distanceCovered * 2 * size,
             gridWidth * 2,
             0,
             Math.PI * 2,
@@ -203,6 +203,20 @@ const fontB = new FontFaceObserver('Dharma Gothic E')
 Promise.all([fontA.load(), fontB.load()]).then(function() {
     init()
     animate()
+})
+
+addEventListener('keydown', function(event) {
+    let keyCode = event.which
+    switch (keyCode) {
+    case 39:
+        next.click()
+        break
+    case 37:
+        prev.click()
+        break
+    default:
+        return null
+    }
 })
 
 //------------------
