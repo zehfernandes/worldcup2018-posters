@@ -1,21 +1,8 @@
-Canvas Boilerplate is the go-to solution for quickly creating modern canvas pieces using ES6 and webpack.
+# Generative WorldCup
 
-## Getting Started
+Generative WorldCup. is an experiment with word cup statistics API and `canvas` to generate abstract patterns for each game. After the match, you can check a new poster in the gallery below.
 
-1.  Clone the repo:
+### Thanks
 
-        git clone https://github.com/christopher4lis/canvas-boilerplate.git
-
-2.  Install dependencies:
-
-        yarn
-
-    or
-
-        npm install
-
-3.  Run webpack:
-
-        npm start
-
-Your canvas piece should open up automatically at http://localhost:3000 and you should see 'HTML CANVAS BOILERPLATE' on hover.
+- World cup API: http://worldcup.sfg.io/
+- Canvas Bolierplate: https://github.com/christopher4lis/canvas-boilerplate
