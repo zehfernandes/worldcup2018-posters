@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generative Worldcup Poster 2018</title>
+
+    <!-- Schema.org -->
+    <meta itemprop="name" content="Generative Worldcup Posters">
+    <meta itemprop="url" content="http://zehfernandes.com/generativeworldcup2018/">
+    <meta itemprop="image" content="http://zehfernandes.com/generativeworldcup2018/cover.png">
+    <meta itemprop="description" content="an experiment with word cup statistics API and canvas to generate abstract patterns for each game.">
+
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="app" />
+    <meta property="og:title" content="Generative Worldcup Posters" />
+    <meta property="og:image" content="http://zehfernandes.com/generativeworldcup2018/cover.png" />
+    <meta property="og:image:width " content="2396" />
+    <meta property="og:image:height " content="1670" />
+    <meta property="og:description" content="an experiment with word cup statistics API and canvas to generate abstract patterns for each game"
+    />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@zehf" />
+    <meta name="twitter:title" content="Generative Worldcup Posters" />
+    <meta name="twitter:description" content="an experiment with word cup statistics API and canvas to generate abstract patterns for each game"
+    />
+    <meta name="twitter:image:src" content="http://zehfernandes.com/generativeworldcup2018/cover.png" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/tachyons.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: 'Timmons NY';
+            src: url('fonts/TimmonsNY.woff2') format('woff2'),
+            url('fonts/TimmonsNY.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Dharma Gothic E';
+            src: url('fonts/DharmaGothicE-Regular.woff2') format('woff2'),
+            url('fonts/DharmaGothicE-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+
+<body class="bg-near-white helvetica black">
+
+    <!-- Topo -->
+    <div style="position: absolute; left: 3rem; top: 1.8rem;">
+        <a href="{{htmlWebpackPlugin.options.links.absoluteURL}}" class="link black hover-red">
+            <h2 class="fw7 mb1 mt2 pa0" style="font-size: 2rem; letter-spacing:-0.03rem; line-height: 1.1em">
+                Generative
+                <br/>Wordcup
+            </h2>
+            <span class="garamond i" style="color: #9B9B9B; letter-spacing: -0.03em">(see all posters)</span>
+        </a>
+    </div>
+
+    <ul class="list fl w-20" style="position: absolute; right: 3rem; top: 1.8rem;">
+        <li class="fr dib">
+            <a class="link fw5 black hover-red" href="{{htmlWebpackPlugin.options.links.github}}">Source Code</a>
+        </li>
+        <li class="fr dib pr4">
+            <a class="link fw5 black hover-red" href="{{htmlWebpackPlugin.options.links.mailto}}">Buy one</a>
+        </li>
+    </ul>
+
+
+    <!-- Bottom -->
+    <!--<a href="" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 7.6em;">
+        <span class="pr1">⏅</span> zoom</a> -->
+    <a href="https://twitter.com/zehf?lang=en" target="_blank" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 4.6em;">
+        <span class="pr1">⏂</span> data</a>
+    <a id="prev" href="{{htmlWebpackPlugin.options.links.absoluteURL}}" class="link f3 black db hover-red" style="position: fixed; left: 3rem; bottom: 2.8rem;">
+        <span class="pr1">←</span> prev</a>
+
+    <a id="next" href="{{htmlWebpackPlugin.options.links.absoluteURL}}" class="link f3 black db hover-red" style="position: fixed; right: 3rem; bottom: 2.8rem;">next
+        <span class="pl1 dib">→</span>
+    </a>
+
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding-top:1.8rem;">
+        <canvas style="max-width: 50%; display: block; box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 20px 0px; box-sizing: border-box;"></canvas>
+    </div>
+</body>
+
+<script>
+    var _gaq = [['_setAccount', 'UA-4721824-10'], ['_trackPageview']];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+
+</html>

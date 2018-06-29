@@ -1,0 +1,4 @@
+node_modules
+.ds_store
+src/fonts/
+dist/
