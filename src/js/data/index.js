@@ -1,4 +1,5 @@
 import colors from './colors'
+import fullColor from './fullColor'
 
 function getpassAccuracy(data, winner) {
     const statistics = data[`${winner}_statistics`]
@@ -67,7 +68,13 @@ function getGameIntensity(data, winner) {
 }
 
 function getColor(data, winner) {
-    return colors[data[winner].code] ? colors[data[winner].code] : '#000'
+    if (data.stage == 'first_stage') {
+        return colors[data[winner].code] ? colors[data[winner].code] : '#000'
+    } else {
+        return fullColor[data[winner].code]
+            ? fullColor[data[winner].code]
+            : '#000'
+    }
 }
 
 function getAttempts(data, winner) {
