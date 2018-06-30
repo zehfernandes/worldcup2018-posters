@@ -48,5 +48,9 @@
         { "file": "JPN-POL.png", "url": "/match/45/japan-vs-poland" },
         { "file": "PAN-TUN.png", "url": "/match/46/panama-vs-tunisia" },
         { "file": "ENG-BEL.png", "url": "/match/47/england-vs-belgium" }
+    ],
+    "round_of_16": [
+        { "file": "FRA-ARG.png", "url": "/match/48/france-vs-argentina" },
+        { "file": "URU-POR.png", "url": "/match/49/uruguay-vs-portugal" }
     ]
 }
