@@ -20,7 +20,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist',
-        filename: 'js/[name].bundle.js'
+        filename: `js/[name].${new Date().getTime()}.bundle.js`
     },
     module: {
         rules: [
