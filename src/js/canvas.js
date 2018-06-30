@@ -62,6 +62,24 @@ function init() {
         context: c
     })
 
+    let [r, g, b] = data.color.bg
+    // x, y, width, height radius
+    const distanceField = new ConicalGradient({
+        context: c,
+        x: innerMargin + gridWidth,
+        y: innerMargin + gridHeight * 2,
+        width: gridWidth * 2,
+        height: data.distanceCovered * 2 * size,
+        radius: gridWidth * 2,
+        startAngle: 0,
+        endAngle: Math.PI * 2,
+        anticlockwise: false
+    })
+        .addColorStop(0, [r, g, b, 0.0])
+        .addColorStop(0.35, [r, g, b, 0.0])
+        .addColorStop(0.4, [r, g, b, 0.3])
+        .addColorStop(1, [0, 0, 0, 0.2])
+
     const gameIntensity = new Noise({
         x: innerMargin + gridWidth,
         y: innerMargin + gridHeight * 2,
@@ -124,9 +142,10 @@ function init() {
         context: c
     })
 
+    objects.push(distanceField)
+    objects.push(gameIntensity)
     objects.push(passAcurrancy)
     objects.push(ballPossession)
-    objects.push(gameIntensity)
     objects.push(attempts)
     objects.push(discipline)
     objects.push(goals)
@@ -140,24 +159,6 @@ function animate() {
     c.clearRect(0, 0, canvas.width, canvas.height)
     c.fillStyle = returnRGBA(data.color.bg)
     c.fillRect(0, 0, canvas.width, canvas.height)
-
-    let [r, g, b] = data.color.bg
-    // x, y, width, height radius
-    new ConicalGradient()
-        .addColorStop(0, [r, g, b, 0.3])
-        .addColorStop(0.35, [r, g, b, 0.3])
-        .addColorStop(1, [0, 0, 0, 0.2])
-        .fill(
-            c,
-            innerMargin + gridWidth,
-            innerMargin + gridHeight * 2,
-            gridWidth * 2,
-            data.distanceCovered * 2 * size,
-            gridWidth * 2,
-            0,
-            Math.PI * 2,
-            false
-        )
 
     objects.forEach(object => {
         object.update()

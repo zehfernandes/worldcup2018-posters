@@ -15,11 +15,9 @@ Noise.prototype.update = function() {
 
 Noise.prototype.draw = function() {
     const c = this.context
-
     for (let x = this.x; x < this.x + this.width; x = x + 1) {
         for (let y = this.y; y < this.y + this.height; y = y + 1) {
             let number = Math.floor(Math.random() * this.noiseGranulaty)
-
             c.fillStyle =
                 'rgba(' +
                 number +
@@ -30,7 +28,7 @@ Noise.prototype.draw = function() {
                 ',' +
                 this.intensity +
                 ')'
-            c.fillRect(x, y, 0.65, 0.65)
+            c.fillRect(x, y, 0.8, 0.8)
         }
     }
 }

@@ -1,9 +1,19 @@
 /**
  * ConicalGradient
  */
-function ConicalGradient() {
+function ConicalGradient(props) {
     this._offsets = []
     this._colors = []
+
+    this.context = props.context
+    this.x = props.x
+    this.y = props.y
+    this.width = props.width
+    this.height = props.height
+    this.radius = props.radius
+    this.startAngle = props.startAngle
+    this.endAngle = props.endAngle
+    this.anticlockwise = props.anticlockwise
 }
 
 ConicalGradient.prototype = {
@@ -26,8 +36,11 @@ ConicalGradient.prototype = {
         array[index] = 1 - offset
     },
 
+    update: function() {
+        this.draw()
+    },
     /**
-     * fill
+     * Draw
      *
      * グラデーションを描画する
      * 第2引数以降は context.arc() とほぼ同じ
@@ -40,17 +53,19 @@ ConicalGradient.prototype = {
      * @param {Number} endAngle
      * @param {Boolean} anticlockwise
      */
-    fill: function(
-        context,
-        x,
-        y,
-        width,
-        height,
-        radius,
-        startAngle,
-        endAngle,
-        anticlockwise
-    ) {
+    draw: function() {
+        let {
+            context,
+            x,
+            y,
+            width,
+            height,
+            radius,
+            startAngle,
+            endAngle,
+            anticlockwise
+        } = this
+
         var offsets = this._offsets
         var colors = this._colors
 
