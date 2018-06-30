@@ -48,11 +48,15 @@ Stripes.prototype.getBarIntensity = function() {
         return 12
     }
 
-    if (this.numPasses > 300 && this.numPasses < 400) {
+    if (this.numPasses > 201 && this.numPasses < 299) {
+        return 11
+    }
+
+    if (this.numPasses >= 300 && this.numPasses < 399) {
         return 10
     }
 
-    if (this.numPasses > 400 && this.numPasses < 500) {
+    if (this.numPasses >= 400 && this.numPasses < 500) {
         return 9
     }
 
