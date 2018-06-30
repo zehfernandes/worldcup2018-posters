@@ -262,5 +262,5 @@ function generateDraw() {
 }
 
 generateDraw()
-//let interval = setInterval(generateDraw, 10000)
 */
+//let interval = setInterval(generateDraw, 10000)
