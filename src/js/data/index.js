@@ -78,8 +78,6 @@ function getColor(data, winner) {
 }
 
 function getAttempts(data, winner) {
-    let time = 90
-
     let awayGoals = data.away_team_events.filter(obj => {
         return obj.type_of_event === 'goal' || obj.type_of_event === 'goal-own'
     })
@@ -102,7 +100,6 @@ function getAttempts(data, winner) {
     console.log(goals)
 
     return {
-        fullTime: time,
         goals: goals,
         attempts: data[`${winner}_statistics`].attempts_on_goal
     }
