@@ -10,9 +10,9 @@ module.exports = {
         text: [0, 0, 0]
     },
     BRA: {
-        bg: [255, 255, 255],
-        highlight: [0, 159, 60],
-        text: [0, 0, 0]
+        bg: [11, 159, 116],
+        highlight: [255, 232, 0],
+        text: [255, 255, 255]
     },
     SRB: {
         bg: [255, 255, 255],
@@ -25,9 +25,9 @@ module.exports = {
         text: [0, 0, 0]
     },
     BEL: {
-        bg: [255, 255, 255],
-        highlight: [207, 0, 22],
-        text: [0, 0, 0]
+        bg: [199, 0, 25],
+        highlight: [253, 223, 0],
+        text: [42, 0, 10]
     },
     TUN: {
         bg: [255, 255, 255],
@@ -80,9 +80,9 @@ module.exports = {
         text: [0, 0, 0]
     },
     RUS: {
-        bg: [255, 255, 255],
-        highlight: [249, 0, 36],
-        text: [0, 0, 0]
+        bg: [210, 0, 25],
+        highlight: [25, 75, 152],
+        text: [255, 255, 255]
     },
     KSA: {
         bg: [255, 255, 255],
