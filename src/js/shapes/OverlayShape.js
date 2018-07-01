@@ -21,12 +21,12 @@ OverlayShape.prototype.draw = function() {
 
     let margin = 8
 
-    //Away Team
     let goals = [this.data.homeTeamGoals, this.data.awayTeamGoals]
+    let penaltis = [this.data.homeTeamPenaltis, this.data.awayTeamPenaltis]
 
+    //Home team
     let newX = this.x
     for (let i = 1; i <= goals[0]; i++) {
-        console.log(i)
         c.beginPath()
         c.arc(newX, this.y, this.radius, 0, 2 * Math.PI)
         c.fillStyle = this.color
@@ -36,6 +36,41 @@ OverlayShape.prototype.draw = function() {
         newX = newX + this.radius * 2 + 10
     }
 
+    //Penaltis Home Team
+    let newY = this.y
+    let countBall = 1
+    if (penaltis[0] > 0) {
+        for (let i = 1; i <= penaltis[0]; i++) {
+            c.beginPath()
+            c.arc(
+                newX - this.radius / 2,
+                newY - this.radius / 2,
+                this.radius / 2,
+                0,
+                2 * Math.PI
+            )
+            c.fillStyle = this.color
+            c.fill()
+            c.closePath()
+
+            if (countBall == 2) {
+                newX = newX - this.radius
+                newY = newY + this.radius
+            } else {
+                newX = newX + this.radius
+            }
+
+            if (countBall == 4) {
+                newX = newX + 10
+                newY = newY - this.radius
+                countBall = 0
+            }
+
+            countBall++
+        }
+    }
+
+    //Away Team
     newX = this.x
     for (let i = 1; i <= goals[1]; i++) {
         c.beginPath()
@@ -53,14 +88,39 @@ OverlayShape.prototype.draw = function() {
         newX = newX + this.radius * 2 + margin
     }
 
-    //Home team
-}
+    //Penaltis Away Team
+    newY = this.y + this.radius * 2 + margin
+    countBall = 1
+    if (penaltis[1] > 0) {
+        for (let i = 1; i <= penaltis[1]; i++) {
+            c.beginPath()
+            c.arc(
+                newX - this.radius / 2,
+                newY - this.radius / 2,
+                this.radius / 2,
+                0,
+                2 * Math.PI
+            )
+            c.fillStyle = this.color
+            c.fill()
+            c.closePath()
 
-/* -------------- 
-	Helper
------------------ */
-OverlayShape.prototype.getNumOfBars = function() {
-    return ((this.width / this.barIntensity) * this.passAccuracy) / 100
+            if (countBall == 2) {
+                newX = newX - this.radius
+                newY = newY + this.radius
+            } else {
+                newX = newX + this.radius
+            }
+
+            if (countBall == 4) {
+                newX = newX + 10
+                newY = newY - this.radius
+                countBall = 0
+            }
+
+            countBall++
+        }
+    }
 }
 
 export default OverlayShape

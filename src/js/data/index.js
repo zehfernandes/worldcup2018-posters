@@ -33,8 +33,10 @@ function getInfos(data, winner) {
     return {
         homeTeamName: data.home_team_country,
         homeTeamGoals: data.home_team.goals,
+        homeTeamPenaltis: data.home_team.penalties,
         awayTeamName: data.away_team_country,
         awayTeamGoals: data.away_team.goals,
+        awayTeamPenaltis: data.away_team.penalties,
         venue: data.venue,
         stage: data.stage_name,
         temperature: `${data.weather.description} - ${
@@ -82,8 +84,6 @@ function getAttempts(data, winner) {
         return obj.type_of_event === 'goal' || obj.type_of_event === 'goal-own'
     })
 
-    console.log(awayGoals)
-
     let homeGoals = data.home_team_events.filter(obj => {
         return obj.type_of_event === 'goal' || obj.type_of_event === 'goal-own'
     })
@@ -95,9 +95,6 @@ function getAttempts(data, winner) {
             return obj
         })
         .sort((x, y) => x.time - y.time)
-
-    console.log('Goals')
-    console.log(goals)
 
     return {
         goals: goals,
