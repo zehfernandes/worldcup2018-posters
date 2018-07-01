@@ -6,7 +6,7 @@ function Noise(props) {
     this.y = props.y
 
     this.intensity = props.data
-    this.noiseGranulaty = 300 * props.size
+    this.noiseGranulaty = 100 * props.size
 }
 
 Noise.prototype.update = function() {
@@ -28,7 +28,7 @@ Noise.prototype.draw = function() {
                 ',' +
                 this.intensity +
                 ')'
-            c.fillRect(x, y, 0.8, 0.8)
+            c.fillRect(x, y, 1, 1)
         }
     }
 }
