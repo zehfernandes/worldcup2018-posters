@@ -51,6 +51,8 @@
     ],
     "round_of_16": [
         { "file": "FRA-ARG.png", "url": "/match/48/france-vs-argentina" },
-        { "file": "URU-POR.png", "url": "/match/49/uruguay-vs-portugal" }
+        { "file": "URU-POR.png", "url": "/match/49/uruguay-vs-portugal" },
+        { "file": "ESP-RUS.png", "url": "/match/50/spain-vs-russia" },
+        { "file": "CRO-DEN.png", "url": "/match/51/croatia-vs-denmark" }
     ]
 }
