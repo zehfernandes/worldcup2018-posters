@@ -58,6 +58,9 @@ SmoothCurve.prototype.draw = function() {
 SmoothCurve.prototype.createCurve = function(data, baseX, baseY) {
     const points = []
 
+    //Todo: Tempo da prorogação
+    //Todo: Pluss acressimos
+
     if (this.data.goals.length <= 0) {
         return [
             {
@@ -71,21 +74,18 @@ SmoothCurve.prototype.createCurve = function(data, baseX, baseY) {
     this.data.goals.forEach((el, index) => {
         let attempts = this.data.attempts > 20 ? 18 : this.data.attempts
         points.push({
-            x: baseX + (this.width * parseInt(el.time)) / 90,
+            x: baseX + (this.width * el.time) / 90,
             y: baseY - (this.height / 20) * attempts
         })
 
         if (this.data.goals[index + 1] != undefined) {
-            if (
-                parseInt(el.time) + 5 >
-                parseInt(this.data.goals[index + 1].time)
-            ) {
+            if (el.time + 5 > this.data.goals[index + 1].time) {
                 return
             }
         }
 
         points.push({
-            x: baseX + this.width / 10 + (this.width * parseInt(el.time)) / 90,
+            x: baseX + this.width / 10 + (this.width * el.time) / 90,
             y: baseY - this.data.attempts * 2
         })
     })

@@ -78,9 +78,13 @@ function getColor(data, winner) {
 }
 
 function getAttempts(data, winner) {
+    let time = 90
+
     let awayGoals = data.away_team_events.filter(obj => {
         return obj.type_of_event === 'goal' || obj.type_of_event === 'goal-own'
     })
+
+    console.log(awayGoals)
 
     let homeGoals = data.home_team_events.filter(obj => {
         return obj.type_of_event === 'goal' || obj.type_of_event === 'goal-own'
@@ -88,9 +92,17 @@ function getAttempts(data, winner) {
 
     let goals = awayGoals
         .concat(homeGoals)
-        .sort((x, y) => parseInt(x.time) - parseInt(y.time))
+        .map(obj => {
+            obj.time = _parseTime(obj.time)
+            return obj
+        })
+        .sort((x, y) => x.time - y.time)
+
+    console.log('Goals')
+    console.log(goals)
 
     return {
+        fullTime: time,
         goals: goals,
         attempts: data[`${winner}_statistics`].attempts_on_goal
     }
@@ -115,6 +127,16 @@ function filterData(data) {
         discipline: getDiscipline(data, getDataFrom),
         intensity: getGameIntensity(data, getDataFrom)
     }
+}
+
+function _parseTime(time) {
+    time = time.split('\'+')
+    let result = parseInt(time[0])
+    if (time.length > 1) {
+        result = parseInt(time[0]) + parseInt(time[1])
+    }
+
+    return result
 }
 
 module.exports = {
