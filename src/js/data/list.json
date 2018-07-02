@@ -22,8 +22,8 @@
         { "file": "IRN-ESP.png", "url": "/match/19/iran-vs-spain" },
         { "file": "DEN-AUS.png", "url": "/match/20/denmark-vs-australia" },
         { "file": "FRA-PER.png", "url": "/match/21/france-vs-peru" },
-        { "file": "ARG-CRO.png", "url": "/match/22/argentina-vs-Croatia" },
-        { "file": "BRA-CRC.png", "url": "/match/23/brazil-vs-Costa-rica" },
+        { "file": "ARG-CRO.png", "url": "/match/22/argentina-vs-croatia" },
+        { "file": "BRA-CRC.png", "url": "/match/23/brazil-vs-costa-rica" },
         { "file": "NGA-ISL.png", "url": "/match/24/nigeria-vs-iceland" },
         { "file": "SRB-SUI.png", "url": "/match/25/serbia-vs-switzerland" },
         { "file": "BEL-TUN.png", "url": "/match/26/belgium-vs-tunisia" },
@@ -53,6 +53,8 @@
         { "file": "FRA-ARG.png", "url": "/match/48/france-vs-argentina" },
         { "file": "URU-POR.png", "url": "/match/49/uruguay-vs-portugal" },
         { "file": "ESP-RUS.png", "url": "/match/50/spain-vs-russia" },
-        { "file": "CRO-DEN.png", "url": "/match/51/croatia-vs-denmark" }
+        { "file": "CRO-DEN.png", "url": "/match/51/croatia-vs-denmark" },
+        { "file": "BRA-MEX.png", "url": "/match/52/brazil-vs-mexico" },
+        { "file": "BEL-JPN.png", "url": "/match/53/belgium-vs-japan" }
     ]
 }

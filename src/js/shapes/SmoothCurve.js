@@ -72,7 +72,7 @@ SmoothCurve.prototype.createCurve = function(data, baseX, baseY) {
     }
 
     this.data.goals.forEach((el, index) => {
-        let attempts = this.data.attempts > 20 ? 18 : this.data.attempts
+        let attempts = this.data.attempts > 17 ? 17 : this.data.attempts
         points.push({
             x: baseX + (this.width * el.time) / 90,
             y: baseY - (this.height / 20) * attempts

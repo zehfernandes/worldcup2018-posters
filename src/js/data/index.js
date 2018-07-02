@@ -70,7 +70,7 @@ function getGameIntensity(data, winner) {
 }
 
 function getColor(data, winner) {
-    if (data.stage_name == 'First Stage') {
+    if (data.stage_name === 'First stage') {
         return colors[data[winner].code] ? colors[data[winner].code] : '#000'
     } else {
         return fullColor[data[winner].code]
