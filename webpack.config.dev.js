@@ -1,12 +1,10 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const listJson = require('./src/js/data/list.json')
 const links = {
-    absoluteURL: 'http://zehfernandes.com/generativeworldcup2018',
+    absoluteURL: 'http://localhost:3000',
     github: 'https://github.com/zehfernandes/worldcup2018-posters',
     mailto:
         'mailto:ozehfernandes@gmail.com?subject=I want a world cup posters ☝️&body=(send an email if you are interested in buying and soon I will answer you with price and print options.)'
@@ -15,12 +13,11 @@ const links = {
 module.exports = {
     mode: 'development',
     entry: {
-        canvas: './src/js/canvas.js',
-        test: './src/js/main.js'
+        canvas: './src/js/canvas.js'
     },
     output: {
         path: __dirname + '/dist',
-        filename: `js/[name].${new Date().getTime()}.bundle.js`
+        filename: 'js/[name].bundle.js'
     },
     module: {
         rules: [
@@ -38,22 +35,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new UglifyJsPlugin({
-            test: /\.js($|\?)/i,
-            uglifyOptions: {
-                compress: {
-                    unused: true,
-                    dead_code: true, // big one--strip code that will never execute
-                    warnings: false, // good for prod apps so users can't peek behind curtain
-                    drop_debugger: true,
-                    conditionals: true,
-                    evaluate: true,
-                    //drop_console: true, // strips console statements
-                    sequences: true,
-                    booleans: true
-                }
-            }
-        }),
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3000,
@@ -75,11 +56,11 @@ module.exports = {
             data: listJson,
             filename: 'index.html',
             template: 'src/index.hbs',
+            inject: false,
             minify: {
                 minifyCSS: true,
                 collapseWhitespace: true
-            },
-            chunks: ['test']
+            }
         }),
         new CopyWebpackPlugin([
             {
@@ -87,14 +68,14 @@ module.exports = {
                 to: __dirname + '/dist/css/tachyons.min.css',
                 toType: 'file'
             }
-        ])
-        /*new CopyWebpackPlugin([
-            {
-                from: __dirname + '/src/images/',
-                to: __dirname + '/dist/images/'
-            }
         ]),
-        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })*/
+        new CopyWebpackPlugin([
+            {
+                from: __dirname + '/src/fonts/',
+                to: __dirname + '/dist/fonts/',
+                toType: 'dir'
+            }
+        ])
     ],
     watch: true,
     devtool: 'source-map'
