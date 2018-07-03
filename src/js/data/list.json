@@ -42,12 +42,12 @@
         { "file": "ISL-CRO.png", "url": "/match/39/iceland-vs-croatia" },
         { "file": "MEX-SWE.png", "url": "/match/40/mexico-vs-sweden" },
         { "file": "KOR-GER.png", "url": "/match/41/korea_republic-vs-germany" },
-        { "file": "SRB-BRA.png", "url": "/match/42/serbia-vs-brazil" },
-        { "file": "SUI-CRC.png", "url": "/match/43/switzerland-vs-costa-rica" },
-        { "file": "SEN-COL.png", "url": "/match/44/senegal-vs-colombia" },
-        { "file": "JPN-POL.png", "url": "/match/45/japan-vs-poland" },
-        { "file": "PAN-TUN.png", "url": "/match/46/panama-vs-tunisia" },
-        { "file": "ENG-BEL.png", "url": "/match/47/england-vs-belgium" }
+        { "file": "SUI-CRC.png", "url": "/match/42/switzerland-vs-costa-rica" },
+        { "file": "SRB-BRA.png", "url": "/match/43/serbia-vs-brazil" },
+        { "file": "JPN-POL.png", "url": "/match/44/japan-vs-poland" },
+        { "file": "SEN-COL.png", "url": "/match/45/senegal-vs-colombia" },
+        { "file": "ENG-BEL.png", "url": "/match/46/england-vs-belgium" },
+        { "file": "PAN-TUN.png", "url": "/match/47/panama-vs-tunisia" }
     ],
     "round_of_16": [
         { "file": "FRA-ARG.png", "url": "/match/48/france-vs-argentina" },
