@@ -25,9 +25,9 @@ module.exports = {
         text: [0, 0, 0]
     },
     BEL: {
-        bg: [199, 0, 25],
+        bg: [190, 0, 20],
         highlight: [253, 223, 0],
-        text: [42, 0, 10]
+        text: [0, 0, 0]
     },
     TUN: {
         bg: [255, 255, 255],
@@ -40,13 +40,13 @@ module.exports = {
         text: [0, 0, 0]
     },
     SWE: {
-        bg: [255, 255, 255],
-        highlight: [255, 223, 0],
-        text: [0, 0, 0]
+        bg: [255, 205, 0],
+        highlight: [0, 105, 169],
+        text: [0, 0, 30]
     },
     ENG: {
-        bg: [255, 255, 255],
-        highlight: [253, 0, 50],
+        bg: [235, 42, 56],
+        highlight: [255, 255, 255],
         text: [0, 0, 0]
     },
     PAN: {
