@@ -6,7 +6,9 @@ Generative WorldCup. is an experiment with word cup statistics API and `canvas` 
     <img src="https://www.dropbox.com/s/yvhch7p4j26zerf/DgaqvdfW4AA9f8H.jpg?raw=1" width="100%" />
 </div>
 
-### Getting Started
+<br/>
+
+## Getting Started
 
 1.  Install the repo
 
@@ -23,7 +25,7 @@ npm start
 
 Your canvas should open up automatically at http://localhost:3000.
 
-### Thanks
+## Thanks
 
 - World cup API: http://worldcup.sfg.io/
 - Canvas Bolierplate: https://github.com/christopher4lis/canvas-boilerplate
