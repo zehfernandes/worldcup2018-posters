@@ -58,5 +58,15 @@
         { "file": "BEL-JPN.png", "url": "/match/53/belgium-vs-japan" },
         { "file": "SWE-SUI.png", "url": "/match/54/sweden-vs-switzerland" },
         { "file": "COL-ENG.png", "url": "/match/55/colombia-vs-england" }
+    ],
+    "quarter_finals": [
+        { "file": "URU-FRA.png", "url": "/match/56/uruguay-vs-france" },
+        { "file": "BRA-BEL.png", "url": "/match/57/brazil-vs-belgium" },
+        { "file": "SWE-ENG.png", "url": "/match/58/sweden-vs-england" },
+        { "file": "RUS-CRO.png", "url": "/match/59/russia-vs-croatia" }
+    ],
+    "semi_finals": [
+        { "file": "FRA-BEL.png", "url": "/match/60/france-vs-belgium" },
+        { "file": "CRO-ENG.png", "url": "/match/61/croatia-vs-england" }
     ]
 }
