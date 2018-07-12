@@ -75,6 +75,12 @@ module.exports = {
                 to: __dirname + '/dist/fonts/',
                 toType: 'dir'
             }
+        ]),
+        new CopyWebpackPlugin([
+            {
+                from: __dirname + '/src/images/',
+                to: __dirname + '/dist/images/'
+            }
         ])
     ],
     watch: true,
