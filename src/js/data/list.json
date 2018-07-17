@@ -68,5 +68,9 @@
     "semi_finals": [
         { "file": "FRA-BEL.png", "url": "/match/60/france-vs-belgium" },
         { "file": "CRO-ENG.png", "url": "/match/61/croatia-vs-england" }
+    ],
+    "finals": [
+        { "file": "BEL-ENG.png", "url": "/match/62/belgium-vs-england" },
+        { "file": "FRA-CRO.png", "url": "/match/63/france-vs-croatia" }
     ]
 }
